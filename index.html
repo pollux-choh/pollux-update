@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POLLUX Update Server</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        .info {
+            background: #e8f4f8;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        .footer {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>POLLUX Update Server</h1>
+        
+        <div class="info">
+            <p><strong>이 저장소는 POLLUX 애플리케이션의 자동 업데이트 메타데이터를 제공합니다.</strong></p>
+            <p>일반 사용자는 이 페이지에 직접 접근할 필요가 없습니다. 애플리케이션이 자동으로 업데이트를 확인합니다.</p>
+        </div>
+
+        <h2>사용 가능한 애플리케이션</h2>
+        <ul>
+            <li><code>pollux-markdown</code> - <a href="/pollux-markdown/latest.json">latest.json</a></li>
+            <li><code>pollux-ergon</code></li>
+            <li><code>pollux-vive</code></li>
+        </ul>
+
+        <h2>메타데이터 형식</h2>
+        <p>각 애플리케이션의 최신 버전 정보는 다음 경로에서 확인할 수 있습니다:</p>
+        <ul>
+            <li><code>/&lt;app-name&gt;/latest.json</code></li>
+        </ul>
+
+        <div class="footer">
+            <p>이 서버는 GitHub Pages를 통해 호스팅됩니다.</p>
+            <p>자동 업데이트는 Tauri의 <code>tauri-plugin-updater</code>를 사용합니다.</p>
+        </div>
+    </div>
+</body>
+</html>
+
