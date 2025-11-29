@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         :root {
             --background: #09090b;
@@ -133,9 +134,9 @@
             gap: 0.25rem;
         }
 
-        .link::after {
-            content: '↗';
-            font-size: 0.75rem;
+        .link svg {
+            width: 12px;
+            height: 12px;
             opacity: 0.5;
         }
 
@@ -152,20 +153,51 @@
             background: #22c55e;
         }
 
-        .code-block {
+        /* File Tree Styles */
+        .file-tree {
             background: var(--muted);
             border: 1px solid var(--border);
             border-radius: var(--radius);
-            padding: 1rem;
-            font-family: 'SF Mono', 'Fira Code', monospace;
+            padding: 1.25rem;
+            font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
             font-size: 0.8125rem;
-            line-height: 1.6;
-            color: var(--muted-foreground);
-            overflow-x: auto;
+            line-height: 1.8;
         }
 
-        .code-block .highlight {
+        .tree-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--muted-foreground);
+        }
+
+        .tree-item svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
+        .tree-item.folder svg {
+            color: #60a5fa;
+        }
+
+        .tree-item.file svg {
+            color: #a1a1aa;
+        }
+
+        .tree-item.root {
             color: var(--foreground);
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .tree-indent-1 { padding-left: 1.25rem; }
+        .tree-indent-2 { padding-left: 2.5rem; }
+
+        .tree-comment {
+            color: #525252;
+            font-style: italic;
+            margin-left: 0.5rem;
         }
 
         footer {
@@ -217,13 +249,23 @@
                         <tr>
                             <td>pollux-markdown</td>
                             <td><span class="badge badge-prod">Production</span></td>
-                            <td><a href="/pollux-update/pollux-markdown/latest.json" class="link">latest.json</a></td>
+                            <td>
+                                <a href="/pollux-update/pollux-markdown/latest.json" class="link">
+                                    latest.json
+                                    <i data-lucide="external-link"></i>
+                                </a>
+                            </td>
                             <td><span class="status"><span class="status-dot"></span>Active</span></td>
                         </tr>
                         <tr>
                             <td>pollux-markdown</td>
                             <td><span class="badge badge-beta">Beta</span></td>
-                            <td><a href="/pollux-update/pollux-markdown-staging/latest.json" class="link">latest.json</a></td>
+                            <td>
+                                <a href="/pollux-update/pollux-markdown-staging/latest.json" class="link">
+                                    latest.json
+                                    <i data-lucide="external-link"></i>
+                                </a>
+                            </td>
                             <td><span class="status"><span class="status-dot"></span>Active</span></td>
                         </tr>
                     </tbody>
@@ -233,15 +275,37 @@
 
         <section>
             <h2>Structure</h2>
-            <div class="code-block">
-<span class="highlight">pollux-update/</span>
-├── pollux-markdown/
-│   ├── latest.json
-│   └── releases/{version}/
-│
-└── pollux-markdown-staging/
-    ├── latest.json
-    └── releases/{version}-beta/
+            <div class="file-tree">
+                <div class="tree-item root folder">
+                    <i data-lucide="folder-open"></i>
+                    <span>pollux-update</span>
+                </div>
+                <div class="tree-item folder tree-indent-1">
+                    <i data-lucide="folder"></i>
+                    <span>pollux-markdown</span>
+                    <span class="tree-comment"># Production</span>
+                </div>
+                <div class="tree-item file tree-indent-2">
+                    <i data-lucide="file-json"></i>
+                    <span>latest.json</span>
+                </div>
+                <div class="tree-item folder tree-indent-2">
+                    <i data-lucide="folder"></i>
+                    <span>releases/{version}/</span>
+                </div>
+                <div class="tree-item folder tree-indent-1">
+                    <i data-lucide="folder"></i>
+                    <span>pollux-markdown-staging</span>
+                    <span class="tree-comment"># Beta</span>
+                </div>
+                <div class="tree-item file tree-indent-2">
+                    <i data-lucide="file-json"></i>
+                    <span>latest.json</span>
+                </div>
+                <div class="tree-item folder tree-indent-2">
+                    <i data-lucide="folder"></i>
+                    <span>releases/{version}-beta/</span>
+                </div>
             </div>
         </section>
     </main>
@@ -249,5 +313,9 @@
     <footer>
         <a href="http://www.pollux.ai">© 2025 POLLUX. All rights reserved.</a>
     </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
