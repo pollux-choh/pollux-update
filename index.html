@@ -5,73 +5,203 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POLLUX Update Server</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 2rem;
             line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
+            color: #e0e0e0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
         }
         .container {
-            background: white;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
             padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
         h1 {
-            color: #2c3e50;
+            color: #4fc3f7;
             margin-top: 0;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        h2 {
+            color: #81d4fa;
+            margin-top: 2rem;
+            font-size: 1.3rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
         }
         .info {
-            background: #e8f4f8;
-            padding: 1rem;
-            border-radius: 4px;
+            background: rgba(79, 195, 247, 0.1);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
             margin: 1rem 0;
+            border-left: 4px solid #4fc3f7;
         }
         code {
-            background: #f4f4f4;
-            padding: 0.2rem 0.4rem;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #80cbc4;
+        }
+        .app-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .app-table th, .app-table td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .app-table th {
+            color: #4fc3f7;
+            font-weight: 600;
+        }
+        .app-table a {
+            color: #80cbc4;
+            text-decoration: none;
+        }
+        .app-table a:hover {
+            text-decoration: underline;
+        }
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .badge-prod {
+            background: rgba(76, 175, 80, 0.2);
+            color: #81c784;
+            border: 1px solid rgba(76, 175, 80, 0.3);
+        }
+        .badge-beta {
+            background: rgba(255, 152, 0, 0.2);
+            color: #ffb74d;
+            border: 1px solid rgba(255, 152, 0, 0.3);
+        }
+        .status {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+        .status-active {
+            background: #4caf50;
+            box-shadow: 0 0 8px #4caf50;
+        }
+        .status-inactive {
+            background: #666;
         }
         .footer {
             margin-top: 2rem;
             padding-top: 1rem;
-            border-top: 1px solid #ddd;
-            color: #666;
-            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #888;
+            font-size: 0.85rem;
+            text-align: center;
         }
+        .footer a {
+            color: #4fc3f7;
+            text-decoration: none;
+        }
+        .structure {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            font-size: 0.85rem;
+            overflow-x: auto;
+            color: #aaa;
+        }
+        .structure .folder { color: #4fc3f7; }
+        .structure .file { color: #80cbc4; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>POLLUX Update Server</h1>
+        <h1>🚀 POLLUX Update Server</h1>
         
         <div class="info">
-            <p><strong>이 저장소는 POLLUX 애플리케이션의 자동 업데이트 메타데이터를 제공합니다.</strong></p>
-            <p>일반 사용자는 이 페이지에 직접 접근할 필요가 없습니다. 애플리케이션이 자동으로 업데이트를 확인합니다.</p>
+            <p><strong>이 서버는 POLLUX 애플리케이션의 자동 업데이트 메타데이터를 제공합니다.</strong></p>
+            <p>💡 일반 사용자는 이 페이지에 직접 접근할 필요가 없습니다. 애플리케이션이 자동으로 업데이트를 확인합니다.</p>
         </div>
 
-        <h2>사용 가능한 애플리케이션</h2>
-        <ul>
-            <li><code>pollux-markdown</code> - <a href="/pollux-update/pollux-markdown/latest.json">latest.json</a></li>
-            <li><code>pollux-ergon</code></li>
-            <li><code>pollux-vive</code></li>
-        </ul>
+        <h2>📦 사용 가능한 애플리케이션</h2>
+        <table class="app-table">
+            <thead>
+                <tr>
+                    <th>애플리케이션</th>
+                    <th>환경</th>
+                    <th>엔드포인트</th>
+                    <th>상태</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>pollux-markdown</code></td>
+                    <td><span class="badge badge-prod">Production</span></td>
+                    <td><a href="/pollux-update/pollux-markdown/latest.json">latest.json</a></td>
+                    <td><span class="status status-active"></span>Active</td>
+                </tr>
+                <tr>
+                    <td><code>pollux-markdown</code></td>
+                    <td><span class="badge badge-beta">Beta</span></td>
+                    <td><a href="/pollux-update/pollux-markdown-staging/latest.json">latest.json</a></td>
+                    <td><span class="status status-active"></span>Active</td>
+                </tr>
+            </tbody>
+        </table>
 
-        <h2>메타데이터 형식</h2>
-        <p>각 애플리케이션의 최신 버전 정보는 다음 경로에서 확인할 수 있습니다:</p>
+        <h2>🔄 업데이트 흐름</h2>
+        <div class="structure">
+            pollux-markdown 리포지토리<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;│<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;├─ <span class="folder">staging</span> 브랜치 → Beta 빌드 → <span class="file">pollux-markdown-staging/</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;│<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;└─ <span class="folder">main</span> 브랜치 → Production 빌드 → <span class="file">pollux-markdown/</span>
+        </div>
+
+        <h2>📁 디렉토리 구조</h2>
+        <div class="structure">
+            <span class="folder">pollux-update/</span><br>
+            ├── <span class="folder">pollux-markdown/</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Production<br>
+            │&nbsp;&nbsp;&nbsp;├── <span class="file">latest.json</span><br>
+            │&nbsp;&nbsp;&nbsp;└── <span class="folder">releases/{version}/</span><br>
+            │<br>
+            ├── <span class="folder">pollux-markdown-staging/</span> &nbsp;&nbsp;# Beta<br>
+            │&nbsp;&nbsp;&nbsp;├── <span class="file">latest.json</span><br>
+            │&nbsp;&nbsp;&nbsp;└── <span class="folder">releases/{version}-beta/</span><br>
+            │<br>
+            └── <span class="file">README.md</span>
+        </div>
+
+        <h2>🛡️ 보안</h2>
         <ul>
-            <li><code>/pollux-update/&lt;app-name&gt;/latest.json</code></li>
+            <li>모든 릴리즈 파일은 <strong>Tauri Signer</strong>로 서명됨</li>
+            <li><code>.sig</code> 파일에 서명 정보 포함</li>
+            <li>앱이 업데이트 전 서명 검증 수행</li>
         </ul>
 
         <div class="footer">
-            <p>이 서버는 GitHub Pages를 통해 호스팅됩니다.</p>
-            <p>자동 업데이트는 Tauri의 <code>tauri-plugin-updater</code>를 사용합니다.</p>
+            <p>GitHub Pages를 통해 호스팅 | <a href="https://github.com/pollux-choh/pollux-update">GitHub Repository</a></p>
+            <p>자동 업데이트: <code>tauri-plugin-updater</code></p>
         </div>
     </div>
 </body>
 </html>
-
