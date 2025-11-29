@@ -4,204 +4,250 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POLLUX Update Server</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --background: #09090b;
+            --foreground: #fafafa;
+            --muted: #27272a;
+            --muted-foreground: #a1a1aa;
+            --border: #27272a;
+            --accent: #18181b;
+            --primary: #fafafa;
+            --radius: 0.5rem;
+        }
+
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-            line-height: 1.6;
-            color: #e0e0e0;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--background);
+            color: var(--foreground);
             min-height: 100vh;
-        }
-        .container {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            padding: 2rem;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-        }
-        h1 {
-            color: #4fc3f7;
-            margin-top: 0;
-            font-size: 2rem;
             display: flex;
+            flex-direction: column;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        main {
+            flex: 1;
+            max-width: 768px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.025em;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--muted-foreground);
+            font-size: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--foreground);
+        }
+
+        .card {
+            background: var(--accent);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.875rem;
+        }
+
+        th {
+            text-align: left;
+            padding: 0.75rem 1rem;
+            font-weight: 500;
+            color: var(--muted-foreground);
+            border-bottom: 1px solid var(--border);
+            background: var(--muted);
+        }
+
+        td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.125rem 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border-radius: 9999px;
+        }
+
+        .badge-prod {
+            background: rgba(34, 197, 94, 0.1);
+            color: #22c55e;
+        }
+
+        .badge-beta {
+            background: rgba(251, 146, 60, 0.1);
+            color: #fb923c;
+        }
+
+        a {
+            color: var(--foreground);
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+
+        a:hover {
+            color: var(--muted-foreground);
+        }
+
+        .link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .link::after {
+            content: '↗';
+            font-size: 0.75rem;
+            opacity: 0.5;
+        }
+
+        .status {
+            display: inline-flex;
             align-items: center;
             gap: 0.5rem;
         }
-        h2 {
-            color: #81d4fa;
-            margin-top: 2rem;
-            font-size: 1.3rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 0.5rem;
-        }
-        .info {
-            background: rgba(79, 195, 247, 0.1);
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-            border-left: 4px solid #4fc3f7;
-        }
-        code {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
-            font-size: 0.9em;
-            color: #80cbc4;
-        }
-        .app-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1rem 0;
-        }
-        .app-table th, .app-table td {
-            padding: 0.75rem 1rem;
-            text-align: left;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .app-table th {
-            color: #4fc3f7;
-            font-weight: 600;
-        }
-        .app-table a {
-            color: #80cbc4;
-            text-decoration: none;
-        }
-        .app-table a:hover {
-            text-decoration: underline;
-        }
-        .badge {
-            display: inline-block;
-            padding: 0.2rem 0.6rem;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-        .badge-prod {
-            background: rgba(76, 175, 80, 0.2);
-            color: #81c784;
-            border: 1px solid rgba(76, 175, 80, 0.3);
-        }
-        .badge-beta {
-            background: rgba(255, 152, 0, 0.2);
-            color: #ffb74d;
-            border: 1px solid rgba(255, 152, 0, 0.3);
-        }
-        .status {
-            display: inline-block;
-            width: 8px;
-            height: 8px;
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
             border-radius: 50%;
-            margin-right: 0.5rem;
+            background: #22c55e;
         }
-        .status-active {
-            background: #4caf50;
-            box-shadow: 0 0 8px #4caf50;
+
+        .code-block {
+            background: var(--muted);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 0.8125rem;
+            line-height: 1.6;
+            color: var(--muted-foreground);
+            overflow-x: auto;
         }
-        .status-inactive {
-            background: #666;
+
+        .code-block .highlight {
+            color: var(--foreground);
         }
-        .footer {
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #888;
-            font-size: 0.85rem;
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 1.5rem;
             text-align: center;
         }
-        .footer a {
-            color: #4fc3f7;
-            text-decoration: none;
+
+        footer a {
+            color: var(--muted-foreground);
+            font-size: 0.875rem;
         }
-        .structure {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 1rem;
-            border-radius: 8px;
-            font-family: 'JetBrains Mono', 'Fira Code', monospace;
-            font-size: 0.85rem;
-            overflow-x: auto;
-            color: #aaa;
+
+        footer a:hover {
+            color: var(--foreground);
         }
-        .structure .folder { color: #4fc3f7; }
-        .structure .file { color: #80cbc4; }
+
+        @media (max-width: 640px) {
+            main {
+                padding: 2rem 1rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            th, td {
+                padding: 0.5rem 0.75rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🚀 POLLUX Update Server</h1>
-        
-        <div class="info">
-            <p><strong>이 서버는 POLLUX 애플리케이션의 자동 업데이트 메타데이터를 제공합니다.</strong></p>
-            <p>💡 일반 사용자는 이 페이지에 직접 접근할 필요가 없습니다. 애플리케이션이 자동으로 업데이트를 확인합니다.</p>
-        </div>
+    <main>
+        <h1>POLLUX Update Server</h1>
+        <p class="subtitle">애플리케이션 자동 업데이트 메타데이터 서버</p>
 
-        <h2>📦 사용 가능한 애플리케이션</h2>
-        <table class="app-table">
-            <thead>
-                <tr>
-                    <th>애플리케이션</th>
-                    <th>환경</th>
-                    <th>엔드포인트</th>
-                    <th>상태</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><code>pollux-markdown</code></td>
-                    <td><span class="badge badge-prod">Production</span></td>
-                    <td><a href="/pollux-update/pollux-markdown/latest.json">latest.json</a></td>
-                    <td><span class="status status-active"></span>Active</td>
-                </tr>
-                <tr>
-                    <td><code>pollux-markdown</code></td>
-                    <td><span class="badge badge-beta">Beta</span></td>
-                    <td><a href="/pollux-update/pollux-markdown-staging/latest.json">latest.json</a></td>
-                    <td><span class="status status-active"></span>Active</td>
-                </tr>
-            </tbody>
-        </table>
+        <section>
+            <h2>Endpoints</h2>
+            <div class="card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Application</th>
+                            <th>Environment</th>
+                            <th>Endpoint</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>pollux-markdown</td>
+                            <td><span class="badge badge-prod">Production</span></td>
+                            <td><a href="/pollux-update/pollux-markdown/latest.json" class="link">latest.json</a></td>
+                            <td><span class="status"><span class="status-dot"></span>Active</span></td>
+                        </tr>
+                        <tr>
+                            <td>pollux-markdown</td>
+                            <td><span class="badge badge-beta">Beta</span></td>
+                            <td><a href="/pollux-update/pollux-markdown-staging/latest.json" class="link">latest.json</a></td>
+                            <td><span class="status"><span class="status-dot"></span>Active</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-        <h2>🔄 업데이트 흐름</h2>
-        <div class="structure">
-            pollux-markdown 리포지토리<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;│<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;├─ <span class="folder">staging</span> 브랜치 → Beta 빌드 → <span class="file">pollux-markdown-staging/</span><br>
-            &nbsp;&nbsp;&nbsp;&nbsp;│<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;└─ <span class="folder">main</span> 브랜치 → Production 빌드 → <span class="file">pollux-markdown/</span>
-        </div>
+        <section>
+            <h2>Structure</h2>
+            <div class="code-block">
+<span class="highlight">pollux-update/</span>
+├── pollux-markdown/
+│   ├── latest.json
+│   └── releases/{version}/
+│
+└── pollux-markdown-staging/
+    ├── latest.json
+    └── releases/{version}-beta/
+            </div>
+        </section>
+    </main>
 
-        <h2>📁 디렉토리 구조</h2>
-        <div class="structure">
-            <span class="folder">pollux-update/</span><br>
-            ├── <span class="folder">pollux-markdown/</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Production<br>
-            │&nbsp;&nbsp;&nbsp;├── <span class="file">latest.json</span><br>
-            │&nbsp;&nbsp;&nbsp;└── <span class="folder">releases/{version}/</span><br>
-            │<br>
-            ├── <span class="folder">pollux-markdown-staging/</span> &nbsp;&nbsp;# Beta<br>
-            │&nbsp;&nbsp;&nbsp;├── <span class="file">latest.json</span><br>
-            │&nbsp;&nbsp;&nbsp;└── <span class="folder">releases/{version}-beta/</span><br>
-            │<br>
-            └── <span class="file">README.md</span>
-        </div>
-
-        <h2>🛡️ 보안</h2>
-        <ul>
-            <li>모든 릴리즈 파일은 <strong>Tauri Signer</strong>로 서명됨</li>
-            <li><code>.sig</code> 파일에 서명 정보 포함</li>
-            <li>앱이 업데이트 전 서명 검증 수행</li>
-        </ul>
-
-        <div class="footer">
-            <p>GitHub Pages를 통해 호스팅 | <a href="https://github.com/pollux-choh/pollux-update">GitHub Repository</a></p>
-            <p>자동 업데이트: <code>tauri-plugin-updater</code></p>
-        </div>
-    </div>
+    <footer>
+        <a href="http://www.pollux.ai">© 2025 POLLUX. All rights reserved.</a>
+    </footer>
 </body>
 </html>
