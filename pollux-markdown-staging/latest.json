@@ -1,15 +1,15 @@
 {
-  "version": "0.1.7-beta",
-  "notes": "https://github.com/pollux-choh/pollux-markdown/releases/tag/pollux-markdown-tauri-v0.1.7",
-  "pub_date": "2025-11-29T19:19:26Z",
+  "version": "0.2.0-beta",
+  "notes": "Beta release 0.2.0-beta",
+  "pub_date": "2025-11-30T16:10:29Z",
   "platforms": {
     "linux-x86_64": {
-      "url": "https://pollux-choh.github.io/pollux-update/pollux-markdown-staging/releases/0.1.7-beta/POLLUX_MARKDOWN_0.1.7-beta_amd64.deb",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUYVFxb3FFWUNzbk5WMWc3TU5NV0M5YUNESnNQYjBmSTdGZlB1ZFJIVHJFREh1SXpUdkNZYk12NXR2bThnMXozeXdkVi9XWHZMbmE2VTRTVG5KOHNoYVF5WFNRMFdCbkF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY0NDQyNTM0CWZpbGU6UE9MTFVYX01BUktET1dOXzAuMS43LWJldGFfYW1kNjQuZGViCnFlcWpiNHNSZi84bXJmbEJaTzhLc3ZqeGZkMU1NQlpmYlcrTWJucm9ybkJVb1dGMGswRUhuM0xOZXVWa1liU1VOMGg5MkwwbHF0bU1ZeVhZM3BJQUJRPT0K"
+      "url": "https://pollux-choh.github.io/pollux-update/pollux-markdown-staging/releases/0.2.0-beta/POLLUX_MARKDOWN_0.2.0-beta_amd64.deb",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUYVFxb3FFWUNzbk5ZRDV5a1VlaDEzUkFsVkdtTmI1RStlOTZ1dFJ2TUVHWWpVZU1NU0ZQK284MEh2c1NHb1Bjc2FHSk5tMldubm1TenI2M1RYaFF2TEJrK3o1NHZZWlFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY0NTE4NzQ3CWZpbGU6UE9MTFVYX01BUktET1dOXzAuMi4wLWJldGFfYW1kNjQuZGViCm9sZnZPU1RvdHlDZkZsY2Z6SkhvcmNTRENkMXBOZmZTckxyM2ppS05WY2dtVlEyZHdWak50bDVid3ZIYXBqVkZoWkVRZEFkV3ZyK1NqcWNoL1dpckNnPT0K"
     },
     "windows-x86_64": {
-      "url": "https://pollux-choh.github.io/pollux-update/pollux-markdown-staging/releases/0.1.7-beta/POLLUX_MARKDOWN_0.1.7-beta_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUYVFxb3FFWUNzbktRVTcwRlFaVnFmaHdNL09LY0VXR09OcDV1ZEQ0UE8xOXp1Vm43ZlFleEdxSWt1Q3pzbVJPREZ6ZWM3ZkI3ZzJqaEZHL09PVDBTWFlQZFcwamdlVHdzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY0NDQyNzk2CWZpbGU6UE9MTFVYX01BUktET1dOXzAuMS43LWJldGFfeDY0LXNldHVwLmV4ZQpHcXpQU3pCbVhid0MzM2hGeU1BQXcxbGZhYVA3Y2FXSDl4TEV2bHpMZWtFcFpUMk5hV2xnd3drUGdKUjAxTDhZZFd0Uk4rbW82NmJBL1NVWHFDZm1EUT09Cg=="
+      "url": "https://pollux-choh.github.io/pollux-update/pollux-markdown-staging/releases/0.2.0-beta/POLLUX_MARKDOWN_0.2.0-beta_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUYVFxb3FFWUNzbkI5OGNHK1RyYThVUFdhSDFlanU4Z0Z1Mis0OUFKYVpFaElvQUZTRExmend2NVUxTlByM1cwWkRsdk5XSjlHTHNqU1BZSS9qaXhZZnhOVzRTWGpzM1FVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY0NTE5MDEzCWZpbGU6UE9MTFVYX01BUktET1dOXzAuMi4wLWJldGFfeDY0LXNldHVwLmV4ZQo3d0ZMcmtEZkc2MENqMklHeTF5TFcvS3ZnQlE0NVNhckY4NDhLOEp2bEFBOTcyc2E3NTRlL0VDS1ZEYm1iYjVzTm1rNzArbFhYY2RPZzllQ1REc0lBQT09Cg=="
     }
   }
 }
