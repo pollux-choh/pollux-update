@@ -1,9 +1,9 @@
 {
-  "version": "0.2.15",
-  "notes": "Production release 0.2.15",
-  "pub_date": "2025-12-04T08:09:43Z",
+  "version": "0.2.16",
+  "notes": "Production release 0.2.16",
+  "pub_date": "2025-12-04T11:49:41Z",
   "platforms": {
-    "linux-x86_64": { "url": "https://pollux-choh.github.io/pollux-update/pollux-markdown/releases/0.2.15/POLLUX_MARKDOWN_0.2.15_amd64.deb", "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTSmhTcmNKTVowYk0vdmlnN250elBzT21hQ3BIcXEvSjF6L3hxZTRuVEluVlFudnBmaTdXM0k1anEwc0RlV0MvTDEyVW00U0FmWlVzQXVhajhEYzFMbDN2UUVHeHlXdVF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY0ODM1NTczCWZpbGU6UE9MTFVYX01BUktET1dOXzAuMi4xNV9hbWQ2NC5kZWIKcndDMkU3ZWtnZ1ZqS2xJOW1uMFZvVkNZcnBMZjlabjU5eTZkdTFwYmwzUzR3WngzZUV1SUorMDkxVWUrZTdScFIyZTN2NWRKVWE1VXJzYjJwTVQ0QXc9PQo=" },
-    "windows-x86_64": { "url": "https://pollux-choh.github.io/pollux-update/pollux-markdown/releases/0.2.15/POLLUX_MARKDOWN_0.2.15_x64-setup.exe", "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTSmhTcmNKTVowYk9nRWxGMTQyeWxEMkVlQ1hXa05pOWhiZDRMTGVxRWRUQmxadW9pY1hmK2tGaURMaTRZaHcrb0FYNFYzYnR5N3VHOGUvY0V3QkhnczZHZlZYclZURGdzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY0ODM1NzYyCWZpbGU6UE9MTFVYX01BUktET1dOXzAuMi4xNV94NjQtc2V0dXAuZXhlCm56Wk04YW9hUFpRTWdPRDRFRlc0ZXVtRCswYk5QS21RcDR2LzFQam1sUUNGaW1HM0dlVVYyT3RUMlFxTkZIV0R0QS9ybGxDVENxR29zcE90V3RVREFBPT0K" }
+    "linux-x86_64": { "url": "https://pollux-choh.github.io/pollux-update/pollux-markdown/releases/0.2.16/POLLUX_MARKDOWN_0.2.16_amd64.deb", "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTSmhTcmNKTVowYkdvdWtVV0tMVS9jMkJXNFVqNlVGRnFyR2toVThyTFdleURmQ1hLbXFzSVF6b3J3VkRWUEtBQjBRM1Njd1VRM0ZDM21haGdVdkh5a2xMaExUd3NYUUFFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY0ODQ4NjkxCWZpbGU6UE9MTFVYX01BUktET1dOXzAuMi4xNl9hbWQ2NC5kZWIKUnlmOHpvNExxQjFwSEF6N3cyVUhZbnNBNVpSYnk0QnRNSGVNWXcrRmQrc3VRck1yWkUzU2FNemJaa2pyQ0FVNmU5Y1h5NTRVYjUyR1FhTlRsam9DRFE9PQo=" },
+    "windows-x86_64": { "url": "https://pollux-choh.github.io/pollux-update/pollux-markdown/releases/0.2.16/POLLUX_MARKDOWN_0.2.16_x64-setup.exe", "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTSmhTcmNKTVowYkU4Zi8rVnpaVGdhS04vMFhXd3JkaGpxL0tZbGZFcmQ4U0ZtM1pNT3p6bU1vWTgzLzRnVEFCaFMxKzRnUWdJK2wyamJaVkJJTzRDUDFSRGZURW5WOXdVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY0ODQ4OTU2CWZpbGU6UE9MTFVYX01BUktET1dOXzAuMi4xNl94NjQtc2V0dXAuZXhlCm5BVStOZUp6TGlDeUhZRDhJMU5UZ1RiNVd4VmJRWHpqZXBDMEJlM2xIbEIrNS83cTNGRmpDWlU5QjJXZyt1aVk3T1JnWWt3QktrR1gvaG9wOFppdkJnPT0K" }
   }
 }
