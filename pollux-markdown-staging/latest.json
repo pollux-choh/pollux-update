@@ -1,9 +1,9 @@
 {
-  "version": "0.2.15-beta",
-  "notes": "Beta release 0.2.15-beta",
-  "pub_date": "2025-12-04T01:39:56Z",
+  "version": "0.2.16-beta",
+  "notes": "Beta release 0.2.16-beta",
+  "pub_date": "2025-12-04T11:26:34Z",
   "platforms": {
-    "linux-x86_64": { "url": "https://pollux-choh.github.io/pollux-update/pollux-markdown-staging/releases/0.2.15-beta/POLLUX_MARKDOWN_0.2.15-beta_amd64.deb", "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUYVFxb3FFWUNzbktyanlKQXlBeGtrRHJNZDdBQzJSOTl5RGF4NjJ2SjUrRHVwK2lwWis5M2o1cHBOU0Q3T0NsVVVYNXFXTENJbVFkOHJBcTZMYjNOUGdEY3VvN1VIZWdnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY0ODEyMTE2CWZpbGU6UE9MTFVYX01BUktET1dOXzAuMi4xNS1iZXRhX2FtZDY0LmRlYgpEYXVIcmxXSWZDbEN5U2NYRUVtS2g3Ym82d1dvbWF2T3NhV0dQdWpkWlpYOUQ1TXV5OExBN2NwY1R2ekFaSkZoeVc2VWVhZEt5T09RSDQ5UjRXMmJEQT09Cg==" },
-    "windows-x86_64": { "url": "https://pollux-choh.github.io/pollux-update/pollux-markdown-staging/releases/0.2.15-beta/POLLUX_MARKDOWN_0.2.15-beta_x64-setup.exe", "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUYVFxb3FFWUNzbkxkcm1YNnBvYmtOY0dBdFlpNnFwUUg3K1VXR1BNckgraEpVT0kvck9IbHlTVm5CMGV3MnVHMGVDcENkbzZvQ1NDNHprR2JneHhCVzZ6RjE4dm5UQXdBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY0ODEyMzc2CWZpbGU6UE9MTFVYX01BUktET1dOXzAuMi4xNS1iZXRhX3g2NC1zZXR1cC5leGUKUFBaTnRrS1BFcmFTQWh3VVpKVmVLNE1KOEo2b1RRWWlhRS82LzJRTm1OdzNMYldPcUEwZXIrb2x6ZG44Szh2Y01qQ2laRllKYWZJTzRJSTNHT2h5RHc9PQo=" }
+    "linux-x86_64": { "url": "https://pollux-choh.github.io/pollux-update/pollux-markdown-staging/releases/0.2.16-beta/POLLUX_MARKDOWN_0.2.16-beta_amd64.deb", "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUYVFxb3FFWUNzbktqUWsvRnlCWWlRZjVVdExqa1JDWFZraGltTlhtcFJvb2VocURNSzNmMERYeFBHM3orMzB2Y0wrSlBXMWVEQ3EwR0o5Vk9ZdE9iWHhGUGk1d05aSUFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY0ODQ3MzY4CWZpbGU6UE9MTFVYX01BUktET1dOXzAuMi4xNi1iZXRhX2FtZDY0LmRlYgo2TXBranVDOXFEbEludFduaUs1ZmllL3JRTmlwcTF5TGI4T1k2bkRxdkRNV1kwM2drSDJoQy83QS9XbkdONmJESUxTeC9zTGtlRFVrSE1RNHpFTHFBUT09Cg==" },
+    "windows-x86_64": { "url": "https://pollux-choh.github.io/pollux-update/pollux-markdown-staging/releases/0.2.16-beta/POLLUX_MARKDOWN_0.2.16-beta_x64-setup.exe", "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUYVFxb3FFWUNzbkQrZGtmbktOWk95RlFSL3cyUHc1R3FqZWM3bXFJMWErLzVjdDloaWhjYlNDc3EreENkRkZvdVh5bjFJYkk2NHBvcHczbHJidlZtYVRObDMvRlkzdUFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY0ODQ3NTY5CWZpbGU6UE9MTFVYX01BUktET1dOXzAuMi4xNi1iZXRhX3g2NC1zZXR1cC5leGUKdXRrQUdZcXdlZ3VWL0pzYWdwc2c5am40c1BPV3RkSGFpcXBMbmdrOFlhZzJIYmJRMTNZV2c0VmMxVkFLV25FdWFPT3lRckhlajNKZnZUWVlBL2ZLQlE9PQo=" }
   }
 }
